@@ -20,11 +20,14 @@
 			min-width: 250px;
 		}
 		.logo {
-			width: 40px;
-			height: 40px;
+			width: 30px;
+			height: 30px;
 		}
 		.flex .fa {
 			font-size: 30px;
+		}
+		.cross {
+			cursor: pointer;
 		}
 	</style>
 
@@ -32,29 +35,37 @@
 </head>
 
 <body class="py-3">
-	<h1 class="w-full text-3xl flex flex-row justify-center items-center">
-		<img class="logo mr-4" src="imgs/logo.png" />iLinks
-	</h1>
-	
-	<hr class="w-11/12 mx-auto mt-2 mb-1">
-	<h2 class="text-sm text-center">Your favourite sites with one click!</h2>
-	<hr class="w-11/12 mx-auto mb-2 mt-1">
+	<div class="main">
+		<h1 class="w-full text-2xl flex flex-row justify-center items-center">
+			<img class="logo mr-4" src="imgs/logo.png" />iLinks
+		</h1>
+		
+		<hr class="w-11/12 mx-auto mt-2 mb-1">
+		<h2 class="text-sm text-center">Your favourite sites with one click!</h2>
+		<hr class="w-11/12 mx-auto mb-2 mt-1">
 
-	<div class="flex flex-row justify-around mt-4">
-		<a href="https://mail.google.com/" target="_blank">
-			<i class="fa fa-envelope fa-lg text-red-500 hover:text-red-600"></i>
-		</a>
-		<a href="https://facebook.com/" target="_blank">
-			<i class="fa fa-facebook-square fa-lg text-blue-500 hover:text-blue-600"></i>
-		</a>
-		<a href="https://twitter.com/" target="_blank">
-			<i class="fa fa-twitter-square fa-lg text-blue-400 hover:text-blue-500"></i>
-		</a>
-		<a href="https://youtube.com/" target="_blank">
-			<i class="fa fa-youtube fa-lg text-red-600 hover:text-red-700"></i>
-		</a>
+		<div class="links flex flex-row justify-around my-4">
+			<!-- <a href="https://mail.google.com/" target="_blank">
+				<i class="fa fa-envelope fa-lg text-red-500 hover:text-red-600"></i>
+			</a> -->
+		</div>
 	</div>
 
-	<script src="popup.js" defer></script>
+	<!-- ____________________________________ -->
+	<div class="initial">
+		<h4 class="txt text-lg text-center">
+			<span class="">Choose your links</span>
+			<span class="cross px-1 ml-4 border hover:border-0 hover:bg-black hover:text-white">&times;</span>
+		</h4>
+		<div class="icons flex flex-row justify-around mt-4">
+			<i id="gm" class="choose fa fa-envelope text-red-500 hover:text-red-600"></i>
+			<i id="fb" class="choose fa fa-facebook-square text-blue-500 hover:text-blue-600"></i>
+			<i id="tt" class="choose fa fa-twitter-square text-blue-400 hover:text-blue-500"></i>
+			<i id="yt" class="choose fa fa-youtube text-red-600 hover:text-red-700"></i>
+		</div>
+	</div>
+
+
+	<script src="popup.js"></script>
 </body>
 </html>
